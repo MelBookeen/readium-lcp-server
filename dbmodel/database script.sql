@@ -2,7 +2,10 @@
 CREATE TABLE IF NOT EXISTS content (
   id varchar(255) PRIMARY KEY NOT NULL,
   encryption_key varchar(64) NOT NULL,
-  location text NOT NULL
+  location text NOT NULL,
+  `length` bigint,
+  sha256 varchar(64),
+  FOREIGN KEY(id) REFERENCES license(content_fk))
 );
 
 CREATE TABLE IF NOT EXISTS license (
@@ -24,7 +27,7 @@ CREATE TABLE IF NOT EXISTS license (
 
 CREATE TABLE IF NOT EXISTS license_status (
   id INTEGER PRIMARY KEY,
-  status int(11) NOT NULL,
+  `status` int(11) NOT NULL,
   license_updated datetime NOT NULL,
   status_updated datetime NOT NULL,
   device_count int(11) DEFAULT NULL,
@@ -32,16 +35,16 @@ CREATE TABLE IF NOT EXISTS license_status (
   license_ref varchar(255) NOT NULL
 );
 
-CREATE INDEX IF NOT EXISTS license_ref_index on license_status (license_ref);
+CREATE INDEX license_ref_index on license_status (license_ref);
 
-CREATE TABLE IF NOT EXISTS event (
+CREATE TABLE IF NOT EXISTS `event` (
 	id INTEGER PRIMARY KEY,
 	device_name varchar(255) DEFAULT NULL,
-	timestamp datetime NOT NULL,
-	type int NOT NULL,
+	`timestamp` datetime NOT NULL,
+	`type` int NOT NULL,
 	device_id varchar(255) DEFAULT NULL,
 	license_status_fk int NOT NULL,
   FOREIGN KEY(license_status_fk) REFERENCES license_status(id)
 );
 
-CREATE INDEX IF NOT EXISTS license_status_fk_index on event (license_status_fk);
+CREATE INDEX license_status_fk_index on event (license_status_fk);
