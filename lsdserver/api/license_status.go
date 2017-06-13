@@ -42,12 +42,12 @@ import (
 	"github.com/readium/readium-lcp-server/config"
 	"github.com/readium/readium-lcp-server/lcpserver/api"
 	"github.com/readium/readium-lcp-server/license"
-	"github.com/readium/readium-lcp-server/license_statuses"
+	"github.com/MelBookeen/readium-lcp-server/license_statuses"
 	"github.com/readium/readium-lcp-server/localization"
 	"github.com/readium/readium-lcp-server/logging"
 	"github.com/readium/readium-lcp-server/problem"
 	"github.com/readium/readium-lcp-server/status"
-	"github.com/readium/readium-lcp-server/transactions"
+	"github.com/MelBookeen/readium-lcp-server/transactions"
 )
 
 type Server interface {

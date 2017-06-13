@@ -33,9 +33,9 @@ import (
 	"github.com/gorilla/mux"
 
 	"github.com/readium/readium-lcp-server/api"
-	"github.com/readium/readium-lcp-server/license_statuses"
+	"github.com/MelBookeen/readium-lcp-server/license_statuses"
 	"github.com/readium/readium-lcp-server/lsdserver/api"
-	"github.com/readium/readium-lcp-server/transactions"
+	"github.com/MelBookeen/readium-lcp-server/transactions"
 )
 
 type Server struct {
