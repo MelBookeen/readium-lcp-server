@@ -28,7 +28,7 @@ package licensestatuses
 import (
 	"time"
 
-	"github.com/readium/readium-lcp-server/transactions"
+	"github.com/MelBookeen/readium-lcp-server/transactions"
 )
 
 type Updated struct {

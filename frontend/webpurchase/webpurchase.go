@@ -40,7 +40,7 @@ import (
 	"github.com/readium/readium-lcp-server/frontend/webpublication"
 	"github.com/readium/readium-lcp-server/frontend/webuser"
 	"github.com/readium/readium-lcp-server/license"
-	"github.com/readium/readium-lcp-server/license_statuses"
+	"github.com/MelBookeen/readium-lcp-server/license_statuses"
 	"github.com/satori/go.uuid"
 )
 
