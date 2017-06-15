@@ -214,5 +214,4 @@ const tableDef = "CREATE TABLE IF NOT EXISTS license_status (" +
   "potential_rights_end datetime DEFAULT NULL," +
   "license_ref varchar(255) NOT NULL," +
   "rights_end datetime DEFAULT NULL  " +
-");" +
-"CREATE INDEX license_ref_index on license_status (license_ref);"
+");"
