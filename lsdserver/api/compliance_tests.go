@@ -3,8 +3,8 @@ package apilsd
 import (
 	"net/http"
 
-	"github.com/readium/readium-lcp-server/logging"
-	"github.com/readium/readium-lcp-server/problem"
+	"github.com/MelBookeen/readium-lcp-server/logging"
+	"github.com/MelBookeen/readium-lcp-server/problem"
 )
 
 var complianceTestNumber string = ""

@@ -35,11 +35,11 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/readium/readium-lcp-server/api"
-	"github.com/readium/readium-lcp-server/config"
-	"github.com/readium/readium-lcp-server/frontend/webpublication"
-	"github.com/readium/readium-lcp-server/frontend/webuser"
-	"github.com/readium/readium-lcp-server/license"
+	"github.com/MelBookeen/readium-lcp-server/api"
+	"github.com/MelBookeen/readium-lcp-server/config"
+	"github.com/MelBookeen/readium-lcp-server/frontend/webpublication"
+	"github.com/MelBookeen/readium-lcp-server/frontend/webuser"
+	"github.com/MelBookeen/readium-lcp-server/license"
 	"github.com/MelBookeen/readium-lcp-server/license_statuses"
 	"github.com/satori/go.uuid"
 )

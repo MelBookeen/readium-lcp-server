@@ -32,7 +32,7 @@ import (
 
 	_ "github.com/mattn/go-sqlite3"
 
-	"github.com/readium/readium-lcp-server/sign"
+	"github.com/MelBookeen/readium-lcp-server/sign"
 )
 
 func TestStoreInit(t *testing.T) {

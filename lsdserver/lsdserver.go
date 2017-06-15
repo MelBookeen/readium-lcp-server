@@ -41,11 +41,11 @@ import (
 	_ "github.com/lib/pq"
 	_ "github.com/mattn/go-sqlite3"
 
-	"github.com/readium/readium-lcp-server/config"
+	"github.com/MelBookeen/readium-lcp-server/config"
 	"github.com/MelBookeen/readium-lcp-server/license_statuses"
-	"github.com/readium/readium-lcp-server/localization"
-	"github.com/readium/readium-lcp-server/logging"
-	"github.com/readium/readium-lcp-server/lsdserver/server"
+	"github.com/MelBookeen/readium-lcp-server/localization"
+	"github.com/MelBookeen/readium-lcp-server/logging"
+	"github.com/MelBookeen/readium-lcp-server/lsdserver/server"
 	"github.com/MelBookeen/readium-lcp-server/transactions"
 )
 

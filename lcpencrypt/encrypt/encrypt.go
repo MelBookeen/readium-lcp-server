@@ -34,9 +34,9 @@ import (
 	"io/ioutil"
 	"os"
 
-	"github.com/readium/readium-lcp-server/crypto"
-	"github.com/readium/readium-lcp-server/epub"
-	"github.com/readium/readium-lcp-server/pack"
+	"github.com/MelBookeen/readium-lcp-server/crypto"
+	"github.com/MelBookeen/readium-lcp-server/epub"
+	"github.com/MelBookeen/readium-lcp-server/pack"
 )
 
 // EncryptedEpub Encrypted epub

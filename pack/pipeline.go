@@ -36,10 +36,10 @@ import (
 
 	"github.com/satori/go.uuid"
 
-	"github.com/readium/readium-lcp-server/crypto"
-	"github.com/readium/readium-lcp-server/epub"
-	"github.com/readium/readium-lcp-server/index"
-	"github.com/readium/readium-lcp-server/storage"
+	"github.com/MelBookeen/readium-lcp-server/crypto"
+	"github.com/MelBookeen/readium-lcp-server/epub"
+	"github.com/MelBookeen/readium-lcp-server/index"
+	"github.com/MelBookeen/readium-lcp-server/storage"
 )
 
 type Source interface {

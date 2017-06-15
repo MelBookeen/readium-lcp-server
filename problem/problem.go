@@ -39,7 +39,7 @@ import (
 
 	"github.com/technoweenie/grohl"
 
-	"github.com/readium/readium-lcp-server/localization"
+	"github.com/MelBookeen/readium-lcp-server/localization"
 )
 
 const (

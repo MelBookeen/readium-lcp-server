@@ -30,7 +30,7 @@ import (
 	"errors"
 	"time"
 
-	"github.com/readium/readium-lcp-server/status"
+	"github.com/MelBookeen/readium-lcp-server/status"
 )
 
 var NotFound = errors.New("Event not found")

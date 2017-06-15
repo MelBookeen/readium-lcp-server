@@ -33,8 +33,8 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/readium/readium-lcp-server/epub/opf"
-	"github.com/readium/readium-lcp-server/xmlenc"
+	"github.com/MelBookeen/readium-lcp-server/epub/opf"
+	"github.com/MelBookeen/readium-lcp-server/xmlenc"
 )
 
 const (
