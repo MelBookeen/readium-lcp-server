@@ -31,8 +31,8 @@ import (
 	"io"
 	"time"
 
-	"github.com/readium/readium-lcp-server/config"
-	"github.com/readium/readium-lcp-server/sign"
+	"github.com/MelBookeen/readium-lcp-server/config"
+	"github.com/MelBookeen/readium-lcp-server/sign"
 )
 
 type Key struct {

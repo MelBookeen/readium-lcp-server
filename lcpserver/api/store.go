@@ -36,13 +36,13 @@ import (
 
 	"github.com/gorilla/mux"
 
-	"github.com/readium/readium-lcp-server/api"
-	"github.com/readium/readium-lcp-server/epub"
-	"github.com/readium/readium-lcp-server/index"
-	"github.com/readium/readium-lcp-server/license"
-	"github.com/readium/readium-lcp-server/pack"
-	"github.com/readium/readium-lcp-server/problem"
-	"github.com/readium/readium-lcp-server/storage"
+	"github.com/MelBookeen/readium-lcp-server/api"
+	"github.com/MelBookeen/readium-lcp-server/epub"
+	"github.com/MelBookeen/readium-lcp-server/index"
+	"github.com/MelBookeen/readium-lcp-server/license"
+	"github.com/MelBookeen/readium-lcp-server/pack"
+	"github.com/MelBookeen/readium-lcp-server/problem"
+	"github.com/MelBookeen/readium-lcp-server/storage"
 )
 
 type Server interface {

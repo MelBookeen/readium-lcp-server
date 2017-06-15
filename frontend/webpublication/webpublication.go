@@ -38,10 +38,10 @@ import (
 
 	"fmt"
 
-	"github.com/readium/readium-lcp-server/api"
-	"github.com/readium/readium-lcp-server/config"
-	"github.com/readium/readium-lcp-server/lcpencrypt/encrypt"
-	"github.com/readium/readium-lcp-server/lcpserver/api"
+	"github.com/MelBookeen/readium-lcp-server/api"
+	"github.com/MelBookeen/readium-lcp-server/config"
+	"github.com/MelBookeen/readium-lcp-server/lcpencrypt/encrypt"
+	"github.com/MelBookeen/readium-lcp-server/lcpserver/api"
 	"github.com/satori/go.uuid"
 
 	"github.com/Machiel/slugify"

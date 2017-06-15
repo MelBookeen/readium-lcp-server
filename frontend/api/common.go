@@ -29,11 +29,11 @@ import (
 	"net/http"
 	"strconv"
 
-	"github.com/readium/readium-lcp-server/api"
-	"github.com/readium/readium-lcp-server/frontend/webpublication"
-	"github.com/readium/readium-lcp-server/frontend/webpurchase"
-	"github.com/readium/readium-lcp-server/frontend/webrepository"
-	"github.com/readium/readium-lcp-server/frontend/webuser"
+	"github.com/MelBookeen/readium-lcp-server/api"
+	"github.com/MelBookeen/readium-lcp-server/frontend/webpublication"
+	"github.com/MelBookeen/readium-lcp-server/frontend/webpurchase"
+	"github.com/MelBookeen/readium-lcp-server/frontend/webrepository"
+	"github.com/MelBookeen/readium-lcp-server/frontend/webuser"
 )
 
 //IServer defines methods for db interaction

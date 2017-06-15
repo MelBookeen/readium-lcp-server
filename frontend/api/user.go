@@ -31,9 +31,9 @@ import (
 	"strconv"
 
 	"github.com/gorilla/mux"
-	"github.com/readium/readium-lcp-server/api"
-	"github.com/readium/readium-lcp-server/frontend/webuser"
-	"github.com/readium/readium-lcp-server/problem"
+	"github.com/MelBookeen/readium-lcp-server/api"
+	"github.com/MelBookeen/readium-lcp-server/frontend/webuser"
+	"github.com/MelBookeen/readium-lcp-server/problem"
 )
 
 //GetUsers returns a list of users

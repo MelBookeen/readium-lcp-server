@@ -45,15 +45,15 @@ import (
 	"github.com/davecgh/go-spew/spew"
 	"github.com/gorilla/mux"
 
-	"github.com/readium/readium-lcp-server/api"
-	"github.com/readium/readium-lcp-server/config"
-	"github.com/readium/readium-lcp-server/crypto"
-	"github.com/readium/readium-lcp-server/epub"
-	"github.com/readium/readium-lcp-server/index"
-	"github.com/readium/readium-lcp-server/license"
-	"github.com/readium/readium-lcp-server/problem"
-	"github.com/readium/readium-lcp-server/sign"
-	"github.com/readium/readium-lcp-server/storage"
+	"github.com/MelBookeen/readium-lcp-server/api"
+	"github.com/MelBookeen/readium-lcp-server/config"
+	"github.com/MelBookeen/readium-lcp-server/crypto"
+	"github.com/MelBookeen/readium-lcp-server/epub"
+	"github.com/MelBookeen/readium-lcp-server/index"
+	"github.com/MelBookeen/readium-lcp-server/license"
+	"github.com/MelBookeen/readium-lcp-server/problem"
+	"github.com/MelBookeen/readium-lcp-server/sign"
+	"github.com/MelBookeen/readium-lcp-server/storage"
 )
 
 func GetLicense(w http.ResponseWriter, r *http.Request, s Server) {

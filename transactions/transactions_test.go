@@ -32,7 +32,7 @@ import (
 
 	_ "github.com/mattn/go-sqlite3"
 	
-	"github.com/readium/readium-lcp-server/status"
+	"github.com/MelBookeen/readium-lcp-server/status"
 )
 
 //TestTransactionCreation opens database and tries to add an event to table 'event'

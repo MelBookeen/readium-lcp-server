@@ -35,8 +35,8 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/readium/readium-lcp-server/api"
-	"github.com/readium/readium-lcp-server/config"
+	"github.com/MelBookeen/readium-lcp-server/api"
+	"github.com/MelBookeen/readium-lcp-server/config"
 )
 
 var NotFound = errors.New("License not found")
