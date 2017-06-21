@@ -4,8 +4,7 @@ CREATE TABLE IF NOT EXISTS content (
   encryption_key varchar(64) NOT NULL,
   location text NOT NULL,
   `length` bigint,
-  sha256 varchar(64),
-  FOREIGN KEY(id) REFERENCES license(content_fk)
+  sha256 varchar(64)
 );
 
 CREATE TABLE IF NOT EXISTS license (
@@ -32,7 +31,8 @@ CREATE TABLE IF NOT EXISTS license_status (
   status_updated datetime NOT NULL,
   device_count int(11) DEFAULT NULL,
   potential_rights_end datetime DEFAULT NULL,
-  license_ref varchar(255) NOT NULL
+  license_ref varchar(255) NOT NULL,
+  rights_end datetime DEFAULT NULL
 );
 
 CREATE INDEX license_ref_index on license_status (license_ref);
