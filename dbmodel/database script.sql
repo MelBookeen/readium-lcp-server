@@ -1,7 +1,7 @@
 
 CREATE TABLE IF NOT EXISTS content (
   id varchar(255) PRIMARY KEY NOT NULL,
-  encryption_key varchar(64) NOT NULL,
+  encryption_key varbinary(64) NOT NULL,
   location text NOT NULL,
   `length` bigint,
   sha256 varchar(64)
