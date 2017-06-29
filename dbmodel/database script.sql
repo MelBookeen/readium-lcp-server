@@ -1,7 +1,7 @@
 
 CREATE TABLE IF NOT EXISTS content (
   id varchar(255) PRIMARY KEY NOT NULL,
-  encryption_key varchar(64) NOT NULL,
+  encryption_key varbinary(64) NOT NULL,
   location text NOT NULL,
   `length` bigint,
   sha256 varchar(64)
@@ -47,4 +47,4 @@ CREATE TABLE IF NOT EXISTS `event` (
   FOREIGN KEY(license_status_fk) REFERENCES license_status(id)
 );
 
-//CREATE INDEX license_status_fk_index on event (license_status_fk);
+#CREATE INDEX license_status_fk_index on event (license_status_fk);
