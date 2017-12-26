@@ -28,7 +28,10 @@ package webuser
 import (
 	"database/sql"
 	"errors"
+	"log"
+	"strings"
 
+	"github.com/readium/readium-lcp-server/config"
 	"github.com/satori/go.uuid"
 )
 
@@ -100,12 +103,12 @@ func (user dbUser) Add(newUser User) error {
 }
 
 func (user dbUser) Update(changedUser User) error {
-	add, err := user.db.Prepare("UPDATE user SET name=? , email=?, password=? WHERE id=?")
+	add, err := user.db.Prepare("UPDATE user SET name=? , email=?, password=?, hint=? WHERE id=?")
 	if err != nil {
 		return err
 	}
 	defer add.Close()
-	_, err = add.Exec(changedUser.Name, changedUser.Email, changedUser.Password, changedUser.ID)
+	_, err = add.Exec(changedUser.Name, changedUser.Email, changedUser.Password, changedUser.Hint, changedUser.ID)
 	return err
 }
 
@@ -155,18 +158,13 @@ func (user dbUser) ListUsers(page int, pageNum int) func() (User, error) {
 
 //Open  returns a WebUser interface (db interaction)
 func Open(db *sql.DB) (i WebUser, err error) {
-	_, err = db.Exec(`CREATE TABLE IF NOT EXISTS user (
-	id integer NOT NULL,
-	uuid varchar(255) NOT NULL,
-	name varchar(64) NOT NULL,
-	email varchar(64) NOT NULL,
-	password varchar(64) NOT NULL,
-	hint varchar(64) NOT NULL,
-
-	constraint pk_user  primary key(id)
-	)`)
-	if err != nil {
-		return
+	// if sqlite, create the content table in the frontend db if it does not exist
+	if strings.HasPrefix(config.Config.FrontendServer.Database, "sqlite") {
+		_, err = db.Exec(tableDef)
+		if err != nil {
+			log.Println("Error creating user table")
+			return
+		}
 	}
 	get, err := db.Prepare("SELECT id, uuid, name, email, password, hint FROM user WHERE id = ? LIMIT 1")
 	if err != nil {
@@ -179,3 +177,11 @@ func Open(db *sql.DB) (i WebUser, err error) {
 	i = dbUser{db, get, getByEmail}
 	return
 }
+
+const tableDef = "CREATE TABLE IF NOT EXISTS user (" +
+	"id integer NOT NULL PRIMARY KEY," +
+	"uuid varchar(255) NOT NULL," +
+	"name varchar(64) NOT NULL," +
+	"email varchar(64) NOT NULL," +
+	"password varchar(64) NOT NULL," +
+	"hint varchar(64) NOT NULL)"

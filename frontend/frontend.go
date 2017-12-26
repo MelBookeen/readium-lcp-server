@@ -60,7 +60,7 @@ func main() {
 	var dbURI, static, configFile string
 	var err error
 
-	if configFile = os.Getenv("READIUM_WEBTEST_CONFIG"); configFile == "" {
+	if configFile = os.Getenv("READIUM_FRONTEND_CONFIG"); configFile == "" {
 		configFile = "config.yaml"
 	}
 	config.ReadConfig(configFile)
@@ -74,6 +74,7 @@ func main() {
 	log.Println("LCP server = " + config.Config.LcpServer.PublicBaseUrl)
 	log.Println("using login  " + config.Config.LcpUpdateAuth.Username)
 
+	// use a sqlite db by default
 	if dbURI = config.Config.FrontendServer.Database; dbURI == "" {
 		dbURI = "sqlite3://file:frontend.sqlite?cache=shared&mode=rwc"
 	}
@@ -142,8 +143,8 @@ func main() {
 	// git update-index --assume-unchanged frontend/manage/config.js
 	window.Config = {`
 	configJs += "\n\tfrontend: {url: '" + config.Config.FrontendServer.PublicBaseUrl + "' },\n"
-	configJs += "\tlcp: {url: '" + config.Config.LcpServer.PublicBaseUrl + "'},\n"
-	configJs += "\tlsd: {url: '" + config.Config.LsdServer.PublicBaseUrl + "'}\n}"
+	configJs += "\tlcp: {url: '" + config.Config.LcpServer.PublicBaseUrl + "', user: '" + config.Config.LcpUpdateAuth.Username + "', password: '" + config.Config.LcpUpdateAuth.Password + "'},\n"
+	configJs += "\tlsd: {url: '" + config.Config.LsdServer.PublicBaseUrl + "', user: '" + config.Config.LsdNotifyAuth.Username + "', password: '" + config.Config.LsdNotifyAuth.Password + "'}\n}"
 
 	log.Println("manage/index.html config.js:")
 	log.Println(configJs)
